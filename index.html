@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kid World 🎮</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="theme-free">
+
+    <!-- =====================================================
+         WELCOME SCREEN
+         ===================================================== -->
+    <section id="welcomeScreen" class="screen">
+
+        <div class="welcome-card">
+
+            <div class="logo">🌎</div>
+
+            <h1>Kid World</h1>
+
+            <p class="subtitle">
+                A fun world made for play! 🎮✨
+            </p>
+
+            <div class="login-box">
+
+                <h2>Welcome! 👋</h2>
+
+                <input
+                    id="nameInput"
+                    type="text"
+                    maxlength="16"
+                    placeholder="Enter your nickname"
+                    autocomplete="off"
+                >
+
+                <button
+                    id="enterWorldBtn"
+                    class="main-button"
+                    type="button"
+                >
+                    ENTER WORLD 🚀
+                </button>
+
+                <p id="errorMessage" class="error"></p>
+
+            </div>
+
+            <p class="safe-text">
+                🛡️ PlayCoins have no real-world value.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MAIN WORLD
+         ===================================================== -->
+    <section id="worldScreen" class="hidden">
+
+        <header class="topbar">
+
+            <div class="brand">
+                🌎 <span>Kid World</span>
+            </div>
+
+            <div class="profile">
+
+                <div class="avatar" id="avatar">
+                    😊
+                </div>
+
+                <div>
+                    <strong id="playerName">Player</strong>
+                    <small id="playerUid">UID: -----</small>
+                </div>
+
+                <button
+                    id="accountButton"
+                    class="account-button"
+                    type="button"
+                    aria-label="Manage accounts"
+                >
+                    👤
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <main>
+
+            <!-- HERO -->
+            <section class="hero">
+
+                <div>
+
+                    <p class="hello">
+                        WELCOME BACK! 👋
+                    </p>
+
+                    <h1 id="welcomeName">
+                        Player
+                    </h1>
+
+                    <p>
+                        Explore the world, play games and collect
+                        PlayCoins! 🪙
+                    </p>
+
+                </div>
+
+                <div class="coin-card">
+
+                    <span>
+                        YOUR PLAYCOINS
+                    </span>
+
+                    <strong>
+                        🪙 <span id="balance">500</span>
+                    </strong>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 NAVIGATION
+                 ================================================= -->
+            <nav class="navigation">
+
+                <button
+                    class="nav-button active"
+                    data-page="home"
+                    type="button"
+                >
+                    🏠 <span>Home</span>
+                </button>
+
+                <button
+                    class="nav-button"
+                    data-page="games"
+                    type="button"
+                >
+                    🎮 <span>Games</span>
+                </button>
+
+                <button
+                    class="nav-button"
+                    data-page="wallet"
+                    type="button"
+                >
+                    🪙 <span>Wallet</span>
+                </button>
+
+                <button
+                    class="nav-button"
+                    data-page="players"
+                    type="button"
+                >
+                    👥 <span>Players</span>
+                </button>
+
+                <button
+                    class="nav-button"
+                    data-page="chat"
+                    type="button"
+                >
+                    💬 <span>Chat</span>
+                </button>
+
+                <button
+                    class="nav-button"
+                    data-page="videos"
+                    type="button"
+                >
+                    📺 <span>Videos</span>
+                </button>
+
+                <button
+                    class="nav-button"
+                    data-page="subscriptions"
+                    type="button"
+                >
+                    👑 <span>Passes</span>
+                </button>
+
+            </nav>
+
+
+            <!-- =================================================
+                 HOME
+                 ================================================= -->
+            <section id="homePage" class="page">
+
+                <h2>
+                    ✨ What's happening?
+                </h2>
+
+                <div class="cards">
+
+                    <div class="feature-card purple">
+
+                        <div class="feature-icon">
+                            🐦
+                        </div>
+
+                        <h3>
+                            Play Flappy Bird
+                        </h3>
+
+                        <p>
+                            Play and turn your score into PlayCoins.
+                        </p>
+
+                        <button
+                            type="button"
+                            onclick="showPage('games')"
+                        >
+                            PLAY NOW →
+                        </button>
+
+                    </div>
+
+
+                    <div class="feature-card yellow">
+
+                        <div class="feature-icon">
+                            🪙
+                        </div>
+
+                        <h3>
+                            Your Wallet
+                        </h3>
+
+                        <p>
+                            Check your PlayCoins and transactions.
+                        </p>
+
+                        <button
+                            type="button"
+                            onclick="showPage('wallet')"
+                        >
+                            OPEN WALLET →
+                        </button>
+
+                    </div>
+
+
+                    <div class="feature-card blue">
+
+                        <div class="feature-icon">
+                            📺
+                        </div>
+
+                        <h3>
+                            Video Shop
+                        </h3>
+
+                        <p>
+                            Use PlayCoins to unlock fun videos.
+                        </p>
+
+                        <button
+                            type="button"
+                            onclick="showPage('videos')"
+                        >
+                            VISIT SHOP →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 GAMES
+                 ================================================= -->
+            <section id="gamesPage" class="page hidden">
+
+                <h2>
+                    🎮 Games
+                </h2>
+
+                <div class="game-card">
+
+                    <div class="bird">
+                        🐦
+                    </div>
+
+                    <h1>
+                        Flappy Bird
+                    </h1>
+
+                    <p>
+                        Every point can become a PlayCoin!
+                    </p>
+
+                    <div class="game-score">
+                        Score:
+                        <strong id="gameScore">0</strong>
+                    </div>
+
+                    <button
+                        id="startGameBtn"
+                        class="main-button"
+                        type="button"
+                    >
+                        START GAME 🐦
+                    </button>
+
+                    <div
+                        id="gameArea"
+                        class="game-area hidden"
+                    >
+
+                        <div id="pipeTop" class="pipe pipe-top"></div>
+
+                        <div id="gameBird">
+                            🐦
+                        </div>
+
+                        <div id="gameText">
+                            CLICK / TAP / SPACE TO FLY!
+                        </div>
+
+                        <div
+                            id="pipeBottom"
+                            class="pipe pipe-bottom"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 WALLET
+                 ================================================= -->
+            <section id="walletPage" class="page hidden">
+
+                <h2>
+                    🪙 My Wallet
+                </h2>
+
+                <div class="wallet-big">
+
+                    <span>
+                        Total PlayCoins
+                    </span>
+
+                    <strong>
+                        🪙 <span id="walletBalance">500</span>
+                    </strong>
+
+                    <small>
+                        PlayCoins have no real-world value.
+                    </small>
+
+                </div>
+
+                <div class="transactions">
+
+                    <div class="transactions-header">
+
+                        <h3>
+                            📜 Recent Activity
+                        </h3>
+
+                        <button
+                            id="allHistoryBtn"
+                            class="history-button"
+                            type="button"
+                        >
+                            VIEW ALL HISTORY →
+                        </button>
+
+                    </div>
+
+                    <div id="transactionList"></div>
+
+                    <div
+                        id="allTransactionList"
+                        class="all-transaction-list hidden"
+                    ></div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 PLAYERS
+                 ================================================= -->
+            <section id="playersPage" class="page hidden">
+
+                <h2>
+                    👥 Players
+                </h2>
+
+                <div
+                    id="playerList"
+                    class="player-list"
+                    aria-live="polite"
+                >
+                    <div class="player-empty">
+                        Loading real players...
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 CHAT
+                 ================================================= -->
+            <section id="chatPage" class="page hidden">
+
+                <h2>
+                    💬 World Chat
+                </h2>
+
+                <div class="chat-box">
+
+                    <div id="messages">
+                        <div class="message">
+                            <p>Connecting to live chat...</p>
+                        </div>
+                    </div>
+
+                    <div class="chat-input">
+
+                        <input
+                            id="chatInput"
+                            maxlength="250"
+                            placeholder="Write a message..."
+                            autocomplete="off"
+                        >
+
+                        <button
+                            id="sendMessageBtn"
+                            type="button"
+                        >
+                            SEND 🚀
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <p class="safety-note">
+                    🛡️ Never share your real name, address,
+                    phone number or password.
+                </p>
+
+            </section>
+
+
+            <!-- =================================================
+                 VIDEO SHOP
+                 ================================================= -->
+            <section id="videosPage" class="page hidden">
+
+                <h2>
+                    📺 Video Shop
+                </h2>
+
+                <div class="video-grid">
+
+                    <div class="video-card">
+
+                        <div
+                            class="video-player locked-video"
+                            data-video-id="Gf4qxkGbp7M"
+                        >
+                            <div class="video-image">
+                                🎬
+                            </div>
+                        </div>
+
+                        <h3>TANK CARTOON S1</h3>
+
+                        <p>Tank Cartoon Season 1</p>
+
+                        <strong>
+                            🪙 <span class="video-price">100</span> PlayCoins
+                        </strong>
+
+                        <button
+                            class="unlock-video-btn"
+                            data-cost="100"
+                            type="button"
+                        >
+                            🔓 UNLOCK
+                        </button>
+
+                    </div>
+
+                    <div class="video-card">
+
+                        <div
+                            class="video-player locked-video"
+                            data-video-id="ImvQ0n__sHg"
+                        >
+                            <div class="video-image">
+                                🎬
+                            </div>
+                        </div>
+
+                        <h3>TANK CARTOON S2</h3>
+
+                        <p>Tank Cartoon Season 2</p>
+
+                        <strong>
+                            🪙 <span class="video-price">200</span> PlayCoins
+                        </strong>
+
+                        <button
+                            class="unlock-video-btn"
+                            data-cost="200"
+                            type="button"
+                        >
+                            🔓 UNLOCK
+                        </button>
+
+                    </div>
+
+                    <div class="video-card">
+
+                        <div
+                            class="video-player locked-video"
+                            data-video-id="GtFHVL9-V5Y"
+                        >
+                            <div class="video-image">
+                                🎬
+                            </div>
+                        </div>
+
+                        <h3>TANK CARTOON S3</h3>
+
+                        <p>Tank Cartoon Season 3</p>
+
+                        <strong>
+                            🪙 <span class="video-price">300</span> PlayCoins
+                        </strong>
+
+                        <button
+                            class="unlock-video-btn"
+                            data-cost="300"
+                            type="button"
+                        >
+                            🔓 UNLOCK
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 SUBSCRIPTIONS
+                 ================================================= -->
+            <section
+                id="subscriptionsPage"
+                class="page hidden"
+            >
+
+                <h2>
+                    👑 KID WORLD SUBSCRIPTIONS
+                </h2>
+
+                <div
+                    id="subscriptionCurrent"
+                    class="subscription-current"
+                ></div>
+
+                <div
+                    id="subscriptionCards"
+                    class="subscription-grid"
+                ></div>
+
+                <p class="subscription-safe">
+                    🛡️ PlayCoins are virtual game currency
+                    and have no real-world value.
+                </p>
+
+            </section>
+
+        </main>
+
+    </section>
+
+
+    <!-- =====================================================
+         ACCOUNT POPUP
+         ===================================================== -->
+    <div
+        id="accountModal"
+        class="modal hidden"
+    >
+
+        <div class="modal-card">
+
+            <button
+                id="closeModal"
+                class="close"
+                type="button"
+            >
+                ✕
+            </button>
+
+            <h2>
+                👤 Accounts
+            </h2>
+
+            <div id="accountList"></div>
+
+            <button
+                id="newAccountBtn"
+                class="main-button"
+                type="button"
+            >
+                ➕ CREATE NEW ACCOUNT
+            </button>
+
+            <button
+                id="deleteAccountBtn"
+                class="delete-account-button"
+                type="button"
+            >
+                🗑️ DELETE CURRENT ACCOUNT
+            </button>
+
+            <button
+                id="logoutBtn"
+                class="logout-button"
+                type="button"
+            >
+                🚪 LOG OUT
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

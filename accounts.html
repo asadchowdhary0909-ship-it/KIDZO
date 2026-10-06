@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KID WORLD - Accounts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="accounts">
+
+    <div class="world-container">
+
+        <header class="topbar">
+
+            <a href="home.html" class="brand">
+                🌍 KID WORLD
+            </a>
+
+            <div class="profile">
+
+                <div class="avatar" id="avatar">
+                    😊
+                </div>
+
+                <div class="profile-info">
+                    <strong id="playerName">Player</strong>
+                    <small id="playerUid">UID: KID-000000</small>
+                </div>
+
+                <a
+                    href="accounts.html"
+                    class="account-button active-account"
+                >
+                    ⚙️
+                </a>
+
+            </div>
+
+        </header>
+
+        <nav class="navigation">
+
+            <a href="home.html" class="nav-button">
+                🏠 Home
+            </a>
+
+            <a href="games.html" class="nav-button">
+                🐦 Games
+            </a>
+
+            <a href="videos.html" class="nav-button">
+                📺 Video Shop
+            </a>
+
+            <a href="wallet.html" class="nav-button">
+                🪙 Wallet
+            </a>
+
+            <a href="chat.html" class="nav-button">
+                💬 Live Chat
+            </a>
+
+        </nav>
+
+        <main>
+
+            <section class="page">
+
+                <div class="section-title">
+
+                    <h2>⚙️ Account Settings</h2>
+
+                    <p>
+                        Manage your KID WORLD accounts.
+                    </p>
+
+                </div>
+
+                <div class="account-settings-card">
+
+                    <div class="current-account">
+
+                        <div
+                            class="large-avatar"
+                            id="accountAvatar"
+                        >
+                            😊
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Current Account
+                            </span>
+
+                            <h2 id="accountName">
+                                Player
+                            </h2>
+
+                            <p id="accountUID">
+                                UID: KID-000000
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <hr>
+
+                    <h3>
+                        👥 Saved Accounts
+                    </h3>
+
+                    <div id="accountList">
+                    </div>
+
+                    <button
+                        id="newAccountBtn"
+                        class="main-button create-account-button"
+                        type="button"
+                    >
+                        ➕ Create New Account
+                    </button>
+
+                    <div class="danger-zone">
+
+                        <h3>
+                            ⚠️ Account Actions
+                        </h3>
+
+                        <button
+                            id="logoutBtn"
+                            class="secondary-button"
+                            type="button"
+                        >
+                            🚪 Log Out Current Account
+                        </button>
+
+                        <button
+                            id="deleteAccountBtn"
+                            class="logout-button"
+                            type="button"
+                        >
+                            🗑️ Delete Current Account
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

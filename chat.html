@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KID WORLD - Live Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="chat">
+
+    <div class="world-container">
+
+        <header class="topbar">
+
+            <a href="home.html" class="brand">
+                🌍 KID WORLD
+            </a>
+
+            <div class="profile">
+
+                <div class="avatar" id="avatar">
+                    😊
+                </div>
+
+                <div class="profile-info">
+                    <strong id="playerName">Player</strong>
+                    <small id="playerUid">UID: KID-000000</small>
+                </div>
+
+                <a
+                    href="accounts.html"
+                    class="account-button"
+                >
+                    ⚙️
+                </a>
+
+            </div>
+
+        </header>
+
+        <nav class="navigation">
+
+            <a href="home.html" class="nav-button">
+                🏠 Home
+            </a>
+
+            <a href="games.html" class="nav-button">
+                🐦 Games
+            </a>
+
+            <a href="videos.html" class="nav-button">
+                📺 Video Shop
+            </a>
+
+            <a href="wallet.html" class="nav-button">
+                🪙 Wallet
+            </a>
+
+            <a href="chat.html" class="nav-button active">
+                💬 Live Chat
+            </a>
+
+        </nav>
+
+        <main>
+
+            <section class="page">
+
+                <div class="section-title">
+
+                    <h2>💬 Live Chat</h2>
+
+                    <p>
+                        Keep the chat friendly and safe!
+                    </p>
+
+                </div>
+
+                <div class="chat-box">
+
+                    <div id="messages">
+                    </div>
+
+                    <div class="chat-input">
+
+                        <input
+                            type="text"
+                            id="chatInput"
+                            placeholder="Type a safe friendly message..."
+                            maxlength="250"
+                            autocomplete="off"
+                        >
+
+                        <button
+                            id="sendMessageBtn"
+                            type="button"
+                        >
+                            Send 🚀
+                        </button>
+
+                    </div>
+
+                    <p class="safety-note">
+                        💡 Remember to keep conversations nice,
+                        friendly and child-friendly!
+                    </p>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

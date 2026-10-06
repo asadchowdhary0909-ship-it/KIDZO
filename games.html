@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KID WORLD - Games</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="games">
+
+    <div class="world-container">
+
+        <header class="topbar">
+
+            <a href="home.html" class="brand">
+                🌍 KID WORLD
+            </a>
+
+            <div class="profile">
+
+                <div class="avatar" id="avatar">
+                    😊
+                </div>
+
+                <div class="profile-info">
+                    <strong id="playerName">Player</strong>
+                    <small id="playerUid">UID: KID-000000</small>
+                </div>
+
+                <a
+                    href="accounts.html"
+                    class="account-button"
+                >
+                    ⚙️
+                </a>
+
+            </div>
+
+        </header>
+
+        <nav class="navigation">
+
+            <a href="home.html" class="nav-button">
+                🏠 Home
+            </a>
+
+            <a href="games.html" class="nav-button active">
+                🐦 Games
+            </a>
+
+            <a href="videos.html" class="nav-button">
+                📺 Video Shop
+            </a>
+
+            <a href="wallet.html" class="nav-button">
+                🪙 Wallet
+            </a>
+
+             <a href="subscription.html" class="nav-button active">
+                👑 Subscriptions
+            </a>
+
+            <a href="chat.html" class="nav-button">
+                💬 Live Chat
+            </a>
+
+        </nav>
+
+        <main>
+
+            <section class="page">
+
+                <div class="section-title">
+                    <h2>🐦 Flappy Bird</h2>
+                    <p>
+                        Fly through the pipes and earn PlayCoins!
+                    </p>
+                </div>
+
+                <div class="game-card">
+
+                    <div class="game-score" id="gameScore">
+                        0
+                    </div>
+
+                    <div
+                        id="gameArea"
+                        class="game-area"
+                    >
+
+                        <div id="gameText">
+                            CLICK / TAP / SPACE TO FLY!
+                        </div>
+
+                        <div id="gameBird">
+                            🐦
+                        </div>
+
+                        <div
+                            id="pipeTop"
+                            class="pipe pipe-top"
+                        ></div>
+
+                        <div
+                            id="pipeBottom"
+                            class="pipe pipe-bottom"
+                        ></div>
+
+                    </div>
+
+                    <button
+                        id="startGameBtn"
+                        class="main-button"
+                        type="button"
+                    >
+                        START GAME 🐦
+                    </button>
+
+                    <p class="game-help">
+                        Press SPACE, click, or tap to fly.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

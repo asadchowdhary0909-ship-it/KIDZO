@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KID WORLD - Video Shop</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="videos">
+
+    <div class="world-container">
+
+        <!-- =====================================================
+             TOP BAR
+             ===================================================== -->
+
+        <header class="topbar">
+
+            <a href="home.html" class="brand">
+                🌍 KID WORLD
+            </a>
+
+            <div class="profile">
+
+                <div class="avatar" id="avatar">
+                    😊
+                </div>
+
+                <div class="profile-info">
+
+                    <strong id="playerName">
+                        Player
+                    </strong>
+
+                    <small id="playerUid">
+                        UID: KID-000000
+                    </small>
+
+                </div>
+
+                <a
+                    href="accounts.html"
+                    class="account-button"
+                    aria-label="Manage accounts"
+                >
+                    ⚙️
+                </a>
+
+            </div>
+
+        </header>
+
+
+        <!-- =====================================================
+             NAVIGATION
+             ===================================================== -->
+
+        <nav class="navigation">
+
+            <a
+                href="home.html"
+                class="nav-button"
+            >
+                🏠 Home
+            </a>
+
+            <a
+                href="games.html"
+                class="nav-button"
+            >
+                🐦 Games
+            </a>
+
+            <a
+                href="videos.html"
+                class="nav-button active"
+            >
+                📺 Video Shop
+            </a>
+
+            <a
+                href="wallet.html"
+                class="nav-button"
+            >
+                🪙 Wallet
+            </a>
+
+            <a
+                href="chat.html"
+                class="nav-button"
+            >
+                💬 Live Chat
+            </a>
+
+            <!-- Subscription / Passes is added by the latest script.js -->
+
+        </nav>
+
+
+        <!-- =====================================================
+             MAIN
+             ===================================================== -->
+
+        <main>
+
+    <section class="page">
+
+        <div class="section-title">
+            <h2>🪙 My Wallet</h2>
+            <p>Check your PlayCoins and complete activity history.</p>
+        </div>
+
+        <div class="wallet-big">
+
+            <span>Total PlayCoins</span>
+
+            <strong>
+                🪙 <span id="walletBalance">500</span>
+            </strong>
+
+            <small>
+                PlayCoins have no real-world value.
+            </small>
+
+        </div>
+
+        <div class="transactions">
+
+            <div class="transactions-header">
+
+                <h3>📜 Recent Activity</h3>
+
+                <button
+                    id="allHistoryBtn"
+                    class="history-button"
+                    type="button"
+                >
+                    VIEW ALL HISTORY →
+                </button>
+
+            </div>
+
+            <div id="transactionList"></div>
+
+            <div
+                id="allTransactionList"
+                class="all-transaction-list hidden"
+            ></div>
+
+        </div>
+
+    </section>
+
+</main>
+
+    </div>
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+         ========================================================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
